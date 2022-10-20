@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container perfil pt-5">
+            <div class="row">
+                <div class="col">
+                    <div id="fecha" class="text-white">19 de Octubre</div>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col">
+                    <h1 class="text-white">Hola, Ezequiel Monachesi.</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <span class="text-white font-monospace">Vamos a cumplir tus metas.</span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-3 mb-3">
+                <div class="col-md-8 bg-light agregar-tarea rounded-pill p-2">
+                    <div class="row justify-content-around align-items-center">
+                        <div class="col-9">
+                            <input type="text" class="border border-0" id="input" placeholder="Agregar una tarea">
+                        </div>
+                        <div class="col-1 p-0">
+                            <i id="enter" class="fa-solid fa-circle-plus fs-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 justify-content-center">
+                <div class="col-9 col-sm-8 col-md-6 seccion-tarea">
+                    <h3 class="text-white fs-6">Estas son tus tareas pendientes</h3>
+                    <ul id="lista" class="p-0">
+                        <li class="text-white rounded-pill">
+                            <div class="row justify-content-center align-items-center py-1">
+                                <div class="col-1 d-flex justify-content-center">
+                                    <i class="fa-regular fa-circle" data="realizado" id="0"></i>
+                                </div>
+                                <div class="col-8">
+                                    <p class="m-0 text-center">Hacer la cama</p>
+                                </div>
+                                <div class="col-1 d-flex justify-content-center">
+                                    <i class="fa-solid fa-trash" data="eliminado" id="0"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
