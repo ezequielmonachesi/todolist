@@ -6,6 +6,7 @@ const check = 'fa-circle-check';
 const uncheck = 'fa-circle';
 const lineThrough = 'text-decoration-line-through';
 var id = 0;
+const LIST=[];
 
 // Función tarea
 
@@ -23,7 +24,7 @@ function agregarTarea(tarea, id, realizado, eliminado){
                     <i class="fa-regular ${REALIZADO}" data="realizado" id="${id}"></i>
                 </div>
                 <div class="col-8">
-                    <p class="m-0 text-center ${LINE}">${tarea}</p>
+                    <p class="text m-0 text-center ${LINE}" >${tarea}</p>
                 </div>
                 <div class="col-1 d-flex justify-content-center">
                     <i class="fa-solid fa-trash" data="eliminado" id="${id}"></i>
@@ -35,13 +36,31 @@ function agregarTarea(tarea, id, realizado, eliminado){
     lista.insertAdjacentHTML('beforeend', elemento)
 }
 
+function tareaRealizada(element){
+    element.classList.toggle(check);
+    element.classList.toggle(uncheck);
+    element.parentNode.parentNode.querySelector('.text').classList.toggle(lineThrough);
+}
+
+function tareaEliminada(element){
+    element.parentNode.parentNode.parentNode.parentNode.removeChild(element.parentNode.parentNode.parentNode);
+}
+
+
 botonEnter.addEventListener('click', () =>{
     const tarea = input.value;
     if(tarea){
         agregarTarea(tarea, id, false, false);
+        LIST.push({
+            nombre: tarea,
+            id:id,
+            realizado:false,
+            elminiado:false
+        })
     }
     input.value='';
-    id++
+    id++;
+    console.log(LIST);
 })
 
 document.addEventListener('keyup', function(event){
@@ -49,13 +68,28 @@ document.addEventListener('keyup', function(event){
         const tarea = input.value;
         if(tarea){
             agregarTarea(tarea, id, false, false);
+            LIST.push({
+                nombre: tarea,
+                id:id,
+                realizado:false,
+                elminiado:false
+            })
         }
         input.value='';
-        id++
+        id++;
+        console.log(LIST);
     }
 })
 
 lista.addEventListener('click', function(event){
     const element = event.target;
-    const elementData = console.log(element.attributes.data.value);
+    console.log(element);
+    const elementData = element.attributes.data.value;
+    console.log(element.attributes.data.value);
+    if(elementData == 'realizado'){
+        tareaRealizada(element);
+    }
+    else if (elementData == 'eliminado'){
+        tareaEliminada(element);
+    }
 })
