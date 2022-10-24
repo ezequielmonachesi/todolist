@@ -21,13 +21,13 @@
         <div class="container perfil pt-5">
             <div class="row">
                 <div class="col">
-                    <div id="fecha" class="text-white">19 de Octubre</div>
+                    <div id="fecha" class="text-white"></div>
                 </div>
             </div>
 
             <div class="row pt-3">
                 <div class="col">
-                    <h1 class="text-white">Hola, Ezequiel Monachesi.</h1>
+                    <h1 class="text-white nombre">Hola, Ezequiel Monachesi.</h1>
                 </div>
             </div>
 
@@ -37,41 +37,50 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center mt-3 mb-3">
-                <div class="col-md-8 bg-light agregar-tarea rounded-pill p-2">
-                    <div class="row justify-content-around align-items-center">
-                        <div class="col-9">
-                            <input type="text" class="border border-0" id="input" placeholder="Agregar una tarea">
-                        </div>
-                        <div class="col-1 p-0">
-                            <i id="boton-enter" class="fa-solid fa-circle-plus fs-1"></i>
+            <div class="row">
+                <div class="col-lg-5">
+                    
+                    <div class="row justify-content-center mt-3 mb-3">
+                        <div class="col-md-8 col-lg-12 bg-light agregar-tarea rounded-pill p-2">
+                            <div class="row justify-content-around align-items-center">
+                                <div class="col-9">
+                                    <input type="text" class="border border-0" id="input" placeholder="Agregar una tarea">
+                                </div>
+                                <div class="col-1 p-0">
+                                    <i id="boton-enter" role="button" class="fa-solid fa-circle-plus fs-1"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-7">
+                    <div class="row justify-content-center">
+                        <div class="col-9 col-sm-8 col-md-6 col-lg-7 seccion-tarea">
+                            <h3 class="text-white fs-6">
+                                Estas son tus tareas pendientes</h3>
+                            <ul id="lista" class="p-0">
+                                
+                                <!-- <li class="text-white rounded-pill">
+                                    <div class="row justify-content-center align-items-center py-1">
+                                        <div class="col-1 d-flex justify-content-center">
+                                            <i class="fa-regular fa-circle" data="realizado" id="0"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0 text-center">Hacer la cama</p>
+                                        </div>
+                                        <div class="col-1 d-flex justify-content-center">
+                                            <i class="fa-solid fa-trash" data="eliminado" id="0"></i>
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="row mt-5 justify-content-center">
-                <div class="col-9 col-sm-8 col-md-6 seccion-tarea">
-                    <h3 class="text-white fs-6">
-                        Estas son tus tareas pendientes</h3>
-                    <ul id="lista" class="p-0">
-                        
-                        <!-- <li class="text-white rounded-pill">
-                            <div class="row justify-content-center align-items-center py-1">
-                                <div class="col-1 d-flex justify-content-center">
-                                    <i class="fa-regular fa-circle" data="realizado" id="0"></i>
-                                </div>
-                                <div class="col-8">
-                                    <p class="m-0 text-center">Hacer la cama</p>
-                                </div>
-                                <div class="col-1 d-flex justify-content-center">
-                                    <i class="fa-solid fa-trash" data="eliminado" id="0"></i>
-                                </div>
-                            </div>
-                        </li> -->
-                    </ul>
                 </div>
             </div>
+
+
 
         </div>
 
